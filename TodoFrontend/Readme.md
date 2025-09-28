@@ -8,8 +8,6 @@ pnpm i
 
 ### run project 
 ```
-make up
-cd TodoBackend
 pnpm run dev
 ```
 
