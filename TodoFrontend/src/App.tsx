@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import WelcomeText from './components/WelcomText';
+import WelcomeText from './components/WelcomeText';
 import TodoContent from './components/TodoContent';
 
 function App() {
