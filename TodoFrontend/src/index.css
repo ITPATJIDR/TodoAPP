@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Tron Legacy Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(130, 152, 183, 0.5);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(130, 152, 183, 0.8);
+  box-shadow: 0 0 10px rgba(130, 152, 183, 0.3);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #8298b7;
+  box-shadow: 0 0 15px rgba(130, 152, 183, 0.5);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(130, 152, 183, 0.5) transparent;
+}
+
+body {
+  background-color: #08090e;
+}
