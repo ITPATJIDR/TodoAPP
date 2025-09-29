@@ -6,10 +6,10 @@
 pnpm i 
 ```
 
-### Prisma generated
+### Prisma push
 
 ```
-npx prisma generated
+npm run db:push
 ```
 
 ### run project 
