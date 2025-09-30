@@ -9,13 +9,13 @@ pnpm i
 ### Prisma push
 
 ```
+make up
+cd TodoBackend
 npm run db:push
 ```
 
 ### run project 
 ```
-make up
-cd TodoBackend
 
 pnpm run build
 pnpm run start
