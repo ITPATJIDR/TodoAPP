@@ -11,7 +11,6 @@ app.use(express.urlencoded({ extended: true }))
 
 const port: number = 5001
 
-// Database connection test endpoint
 app.get('/health', async (req: Request, res: Response) => {
   try {
     await prisma.$queryRaw`SELECT 1`
@@ -32,17 +31,9 @@ app.get('/health', async (req: Request, res: Response) => {
 
 app.use('/api/todos', Todo_router)
 
-app.get('/', (req: Request, res: Response) => {
-  res.json({
-    message: 'Server is running'
-  })
-})
-
-// Graceful shutdown handling
 const server = app.listen(port, async () => {
   console.log(`Application is running on port ${port}`)
   
-  // Test database connection on startup
   try {
     await prisma.$connect()
     console.log('✅ Database connected successfully')
@@ -51,7 +42,6 @@ const server = app.listen(port, async () => {
   }
 })
 
-// Handle graceful shutdown
 process.on('SIGINT', async () => {
   console.log('\n🛑 Shutting down gracefully...')
   await prisma.$disconnect()

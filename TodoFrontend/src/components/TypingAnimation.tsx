@@ -21,6 +21,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
 
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       const fullText = texts[currentTextIndex];
@@ -40,7 +41,6 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
         }
       }
     }, isDeleting ? deletingSpeed : typingSpeed);
-
     return () => clearTimeout(timeout);
   }, [currentText, currentTextIndex, isDeleting, texts, typingSpeed, deletingSpeed, pauseTime]);
 
